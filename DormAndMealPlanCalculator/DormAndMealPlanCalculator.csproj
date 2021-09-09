@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Dormitory.cs" />
     <Compile Include="MealPlan.cs" />
+    <Compile Include="ResultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResultsForm.Designer.cs">
+      <DependentUpon>ResultsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SelectionsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ResultsForm.resx">
+      <DependentUpon>ResultsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SelectionsForm.resx">
       <DependentUpon>SelectionsForm.cs</DependentUpon>
     </EmbeddedResource>
