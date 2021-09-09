@@ -35,9 +35,14 @@ namespace DormAndMealPlanCalculator
             addDorm(name: "University Suites", cost: 2500);
         }
 
-        private void dormsListView_SelectedIndexChanged(object sender, EventArgs e)
+        public void refreshDorms()
         {
-
+            dormsListView.Clear();
+            for (int i = 0; i < dormitories.Count; i++)
+            {
+                dormsListView.Items.Add(dormitories[i].Name).
+                    SubItems.Add(dormitories[i].Cost.ToString("C2"));
+            }
         }
     }
 }
