@@ -12,24 +12,32 @@ namespace DormAndMealPlanCalculator
 {
     public partial class SelectionsForm : Form
     {
+        List<Dormitory> dormitories = new List<Dormitory>();
+
         public SelectionsForm()
         {
             InitializeComponent();
             createDorms();
         }
 
-        private void addDorm(string dormName, int dormCost)
+        public void addDorm(string name, int cost)
         {
-            dormsListView.Items.Add(dormName).
-                SubItems.Add(dormCost.ToString("C"));
+            dormitories.Add(new Dormitory(name, cost));
+            dormsListView.Items.Add(name).
+                SubItems.Add(cost.ToString("C2"));
         }
 
-        private void createDorms()
+        public void createDorms()
         {
-            addDorm(dormName: "Allen Hall", dormCost: 1500);
-            addDorm(dormName: "Pike Hall", dormCost: 1600);
-            addDorm(dormName: "Farthing Hall", dormCost: 1800);
-            addDorm(dormName: "University Suites", dormCost: 2500);
+            addDorm(name: "Allen Hall", cost: 1500);
+            addDorm(name: "Pike Hall", cost: 1600);
+            addDorm(name: "Farthing Hall", cost: 1800);
+            addDorm(name: "University Suites", cost: 2500);
+        }
+
+        private void dormsListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

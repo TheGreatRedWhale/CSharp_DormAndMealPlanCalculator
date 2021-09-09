@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dormitory.cs" />
     <Compile Include="SelectionsForm.cs">
       <SubType>Form</SubType>
     </Compile>
