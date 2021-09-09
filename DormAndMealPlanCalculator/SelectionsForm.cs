@@ -44,5 +44,22 @@ namespace DormAndMealPlanCalculator
                     SubItems.Add(dormitories[i].Cost.ToString("C2"));
             }
         }
+
+        public void calculate()
+        {
+            try
+            {
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message + "\n-----\n" + e.StackTrace);
+            }
+        }
+
+        private void calculateButton_Click(object sender, EventArgs e)
+        {
+            calculate();
+        }
     }
 }

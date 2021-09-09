@@ -36,6 +36,7 @@
             this.mealsPerWeekHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.mealsCostHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.instructionsLabel2 = new System.Windows.Forms.Label();
+            this.calculateButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dormsListView
@@ -106,17 +107,30 @@
             this.instructionsLabel2.TabIndex = 3;
             this.instructionsLabel2.Text = "Once selected, click \"Calculate\" to see your total semester cost.";
             // 
+            // calculateButton
+            // 
+            this.calculateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calculateButton.Location = new System.Drawing.Point(12, 294);
+            this.calculateButton.Name = "calculateButton";
+            this.calculateButton.Size = new System.Drawing.Size(339, 43);
+            this.calculateButton.TabIndex = 4;
+            this.calculateButton.Text = "Calculate";
+            this.calculateButton.UseVisualStyleBackColor = true;
+            this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
+            // 
             // SelectionsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(365, 348);
+            this.Controls.Add(this.calculateButton);
             this.Controls.Add(this.instructionsLabel2);
             this.Controls.Add(this.mealsListView);
             this.Controls.Add(this.instructionsLabel1);
             this.Controls.Add(this.dormsListView);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SelectionsForm";
-            this.Text = "Form1";
+            this.Text = "Dorm and Meal Plan Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,6 +146,7 @@
         private System.Windows.Forms.ColumnHeader mealsPerWeekHeader;
         private System.Windows.Forms.ColumnHeader mealsCostHeader;
         private System.Windows.Forms.Label instructionsLabel2;
+        private System.Windows.Forms.Button calculateButton;
     }
 }
 
