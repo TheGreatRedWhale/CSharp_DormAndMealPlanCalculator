@@ -93,9 +93,9 @@ namespace DormAndMealPlanCalculator
                 int mealPlanCost = Int32.Parse(mealsListView.SelectedItems[0].SubItems[1].Text.ToString(), NumberStyles.Currency);
                 MessageBox.Show((dormCost + mealPlanCost).ToString("C2"));
             }
-            catch (Exception e)
+            catch (ArgumentException e)
             {
-                MessageBox.Show(e.Message + "\n-----\n" + e.StackTrace);
+                MessageBox.Show("Select a dormitory and a meal plan before clicking \"Calculate\".", "Argument Exception", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 

@@ -49,7 +49,7 @@
             this.dormsListView.Location = new System.Drawing.Point(12, 52);
             this.dormsListView.MultiSelect = false;
             this.dormsListView.Name = "dormsListView";
-            this.dormsListView.Size = new System.Drawing.Size(162, 231);
+            this.dormsListView.Size = new System.Drawing.Size(186, 231);
             this.dormsListView.TabIndex = 0;
             this.dormsListView.UseCompatibleStateImageBehavior = false;
             this.dormsListView.View = System.Windows.Forms.View.Details;
@@ -71,7 +71,7 @@
             this.instructionsLabel1.Location = new System.Drawing.Point(9, 11);
             this.instructionsLabel1.Name = "instructionsLabel1";
             this.instructionsLabel1.Size = new System.Drawing.Size(195, 13);
-            this.instructionsLabel1.TabIndex = 1;
+            this.instructionsLabel1.TabIndex = 3;
             this.instructionsLabel1.Text = "Select a dormitory and meal plan option.";
             // 
             // mealsListView
@@ -81,11 +81,11 @@
             this.mealsCostHeader});
             this.mealsListView.FullRowSelect = true;
             this.mealsListView.HideSelection = false;
-            this.mealsListView.Location = new System.Drawing.Point(189, 52);
+            this.mealsListView.Location = new System.Drawing.Point(209, 52);
             this.mealsListView.MultiSelect = false;
             this.mealsListView.Name = "mealsListView";
-            this.mealsListView.Size = new System.Drawing.Size(162, 231);
-            this.mealsListView.TabIndex = 2;
+            this.mealsListView.Size = new System.Drawing.Size(186, 231);
+            this.mealsListView.TabIndex = 1;
             this.mealsListView.UseCompatibleStateImageBehavior = false;
             this.mealsListView.View = System.Windows.Forms.View.Details;
             // 
@@ -106,7 +106,7 @@
             this.instructionsLabel2.Location = new System.Drawing.Point(9, 26);
             this.instructionsLabel2.Name = "instructionsLabel2";
             this.instructionsLabel2.Size = new System.Drawing.Size(310, 13);
-            this.instructionsLabel2.TabIndex = 3;
+            this.instructionsLabel2.TabIndex = 4;
             this.instructionsLabel2.Text = "Once selected, click \"Calculate\" to see your total semester cost.";
             // 
             // calculateButton
@@ -114,8 +114,8 @@
             this.calculateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calculateButton.Location = new System.Drawing.Point(12, 294);
             this.calculateButton.Name = "calculateButton";
-            this.calculateButton.Size = new System.Drawing.Size(339, 43);
-            this.calculateButton.TabIndex = 4;
+            this.calculateButton.Size = new System.Drawing.Size(383, 43);
+            this.calculateButton.TabIndex = 2;
             this.calculateButton.Text = "Calculate";
             this.calculateButton.UseVisualStyleBackColor = true;
             this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
@@ -124,7 +124,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(365, 348);
+            this.ClientSize = new System.Drawing.Size(408, 348);
             this.Controls.Add(this.calculateButton);
             this.Controls.Add(this.instructionsLabel2);
             this.Controls.Add(this.mealsListView);
