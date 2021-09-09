@@ -89,11 +89,20 @@ namespace DormAndMealPlanCalculator
         {
             try
             {
-                int dormCost = Int32.Parse(dormsListView.SelectedItems[0].SubItems[1].Text.ToString(), NumberStyles.Currency);
-                int mealPlanCost = Int32.Parse(mealsListView.SelectedItems[0].SubItems[1].Text.ToString(), NumberStyles.Currency);
-                MessageBox.Show((dormCost + mealPlanCost).ToString("C2"));
+                var dorm = dormsListView.SelectedItems[0];
+                var mealPlan = mealsListView.SelectedItems[0];
+                int dormCost = Int32.Parse(dorm.SubItems[1].Text.ToString(), NumberStyles.Currency);
+                int mealPlanCost = Int32.Parse(mealPlan.SubItems[1].Text.ToString(), NumberStyles.Currency);
+                ResultsForm resultsForm = new ResultsForm();
+                resultsForm.resultsTextBox.Text = (
+                    "You selected:" + System.Environment.NewLine +
+                    dorm.SubItems[0].Text + ": " + dorm.SubItems[1].Text + System.Environment.NewLine +
+                    mealPlan.SubItems[0].Text + " meals per week: " + mealPlan.SubItems[1].Text + System.Environment.NewLine +
+                    "------------------------------------------------------------------------" + System.Environment.NewLine +
+                    "TOTAL: " + (dormCost + mealPlanCost).ToString("C2"));
+                resultsForm.ShowDialog();
             }
-            catch (ArgumentException e)
+            catch (ArgumentException)
             {
                 MessageBox.Show("Select a dormitory and a meal plan before clicking \"Calculate\".", "Argument Exception", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
