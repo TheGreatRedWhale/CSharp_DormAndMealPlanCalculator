@@ -62,6 +62,7 @@
             // dormCostHeader
             // 
             this.dormCostHeader.Text = "Cost";
+            this.dormCostHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.dormCostHeader.Width = 68;
             // 
             // instructionsLabel1
@@ -96,6 +97,7 @@
             // mealsCostHeader
             // 
             this.mealsCostHeader.Text = "Cost";
+            this.mealsCostHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.mealsCostHeader.Width = 68;
             // 
             // instructionsLabel2
